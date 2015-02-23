@@ -1,0 +1,18 @@
+/* This file will hold styles that are loaded using the same media query as the wide grid. */
+ul.nice-menu a {
+  font-size: 2em;
+}
+
+menu-path-node {
+  width: 100%;
+}
+/*
+.front .node-teaser {
+  width: 49%;
+  float: left;
+  margin-right: 2%;
+}
+.front .node-teaser:nth-child(2n+2) {
+  margin-right: 0;
+}
+*/

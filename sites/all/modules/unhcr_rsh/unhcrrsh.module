@@ -1,0 +1,50 @@
+<?php
+/*
+ * Created march 2014*
+ * License Proprietary*
+ * Owner Miami Kelvin*
+ * Publishe Miami Kelvin*
+ */
+ /*
+  * implements hook_node_insert($node)
+  */
+ require_once ( dirname(__FILE__) . '/includes/functions.php');
+
+function unhcrrsh_init(){
+#	drupal_add_js(drupal_get_path('module', 'unhcrrsh') .'/unchr_rsh_page.js');
+}
+function unhcrrsh_token_info() {
+  $info['tokens']['file']['image_field_caption'] = array(
+    'name' => t('Image Field Caption'),
+    'description' => t('The image caption, if enabled.'),
+  );
+  return $info;
+}
+
+function unhcrrsh_tokens($type, $tokens, $data = array(), $options = array()) {
+  if ($type != 'file' || empty($tokens['image_field_caption']) || $tokens['image_field_caption'] != '[file:image_field_caption]' || empty($data['file']) || empty($data['file']->image_field_caption['value'])) {
+    return;
+  }
+  $options = array_merge(array('language' => LANGUAGE_NONE, 'sanitize' => TRUE), $options);
+
+  $caption = check_markup($data['file']->image_field_caption['value'], $data['file']->image_field_caption['format'], $options['language']);
+  if ($options['sanitize']) {
+    $caption = filter_xss($caption);
+  }
+  return array('[file:image_field_caption]' => $caption);
+}
+function unhcrrsh_views_pre_view(&$view, &$display_id, &$args) {
+	if ($view->name == 'gallery_mod'){
+	}
+}
+function unhcrrsh_node_view($node, $view_mode) {
+    if ($node->type=="photo_essay_gallery_"){
+        if ($view_mode == 'gallery_list'){
+		$nodeid = $node->nid;
+		/*$first_ImageUri = $node->content['field_slide_photos'][0]['uri'];
+		$first_imageURL = file_create_url($first_ImageUri);*/
+		$node->content['node_link'][0]['#markup'] = '<span class="gallery-read-more"><a href="?width=1100&amp;height=810&amp;inline=true#node-photo-essay-gallery-' .$nodeid .'" title=" " class="colorbox init-colorbox-processed cboxElement colorbox-inline" rel="gallery-node-' .$nodeid .'-field_slide_photos">Open Gallery</a></span>';
+		/*krumo($node);*/
+		}
+	}
+}

@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ * Provides installation functions.
+ *
+ * @author Jimmy Berry ("boombatower", http://drupal.org/user/214218)
+ */
+
+/**
+ * Implements hook_install().
+ */
+function subuser_install() {
+  $record = array(
+    'predicate' => 'subuser',
+    'label' => t('Subuser'),
+    'directional' => TRUE,
+    'source_bundles' => array('user:user'),
+    'target_bundles' => array('user:user'),
+  );
+  relation_type_save($record);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function subuser_uninstall() {
+  relation_type_delete('subuser');
+
+  variable_del('subuser_list');
+  variable_del('subuser_relation');
+}

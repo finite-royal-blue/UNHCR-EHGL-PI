@@ -1,0 +1,163 @@
+html, body, div {
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  outline: 0; 
+  font-size: 100%; 
+  vertical-align: baseline; 
+  font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  outline: 0; 
+  font-size: 100%; 
+  vertical-align: baseline; 
+  font: inherit; 
+  font-weight: bold;
+}
+
+a, p, ul, ol, li, img, span, strong, em {
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  outline: 0; 
+  font-size: 100%; 
+  vertical-align: baseline; 
+  font: inherit;
+}
+.region-inner .content-inner .block-inner .content .menu-block-wrapper .menu a, p, ul, li{
+  margin: 0; 
+  padding: 0; 
+  padding-left:12px;
+  border: 0; 
+  outline: 0; 
+  font-size: 100%; 
+  vertical-align: baseline; 
+  font: inherit;
+}
+
+table, tbody, tfoot, thead, tr, th, td {
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  outline: 0; 
+  font-size: 100%; 
+  vertical-align: baseline; 
+  font: inherit;
+}
+
+applet, object, iframe, blockquote, pre, abbr, acronym, address, big, cite, code,
+del, dfn, font, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, caption, fieldset, form, label, legend {
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  outline: 0; 
+  font-size: 100%; 
+  vertical-align: baseline; 
+  font: inherit;
+}
+
+article, aside, figure, footer, header, hgroup, section {
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  outline: 0;
+  font-size: 100%; 
+  vertical-align: baseline; 
+  font: inherit;
+}
+
+canvas, details, embed, figcaption, menu, nav, output, ruby, summary, time, mark, audio, video {
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  outline: 0; 
+  font-size: 100%; 
+  vertical-align: baseline; 
+  font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.content #button{
+	-moz-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+	box-shadow:inset 0px 1px 0px 0px #cae3fc;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #057df5) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #057df5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#057df5');
+	background-color:#79bbff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #0c81f5;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	height:10px;
+	padding:6px 5px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #287ace;}
+	.content #button a{color:#fff; line-height:10px;}
+	.content #button p{color:#fff; line-height:10px;}
+	.content #button:hover{background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #057df5), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #057df5 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#057df5', endColorstr='#79bbff');
+	background-color:#057df5;}

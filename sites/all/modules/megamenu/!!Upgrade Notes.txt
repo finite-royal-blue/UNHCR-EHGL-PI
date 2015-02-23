@@ -1,0 +1,41 @@
+// remove all z-indexes from css files
+
+
+// Inserted about line 163 (just above function megamenu_open_process())
+		if ($(this).find('ul.megamenu-bin').get(0)) {
+			$(this).find('h2 a').removeAttr('href'); // remove link from parent items with children
+		}
+
+
+// Inserted to replace function megamenu_open_progress()  (http://drupal.org/node/1279870#comment-6314018)
+
+// Remove href from menu parent items.
+function megamenu_open_progress() {
+  if ($(this).find('ul.megamenu-bin').get(0)) {
+    $(this).find('h2 a').removeAttr('href');
+    //alert('anchor removed');
+  }
+}
+
+//Display dropdown
+$("#megamenu-main-menu h2.megamenu-parent-title a").bind('touchstart', function(e){
+if($('#megamenu-main-menu li').find('.megamenu-active')) {
+$('.megamenu-parent').bind('megamenu_open', megamenu_open_progress);
+$('.megamenu-parent-title').bind('touchstart', megamenu_open);
+//alert('this is visible!');
+} else {
+$("body").bind('click', megamenu_closeAll);
+$('.megamenu-parent').bind('megamenu_close', megamenu_close_progress);
+//alert('this is hidden!');
+}
+});
+
+// Add mobile-friendly off trigger.
+$('html').bind('touchstart', function(e){
+megamenu_closeAll();
+oldParentIdx = -1;
+});
+
+$(".megamenu-menu").bind('touchstart', function(e){
+e.stopPropagation();
+});

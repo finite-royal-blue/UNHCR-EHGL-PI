@@ -1,0 +1,110 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+#zone-branding {
+  background-image: url('../images/unhcr_header_back.jpg');
+  background-repeat: repeat-x;
+  /* border-radius: 25px; */
+  overflow: hidden;
+  /*box-shadow: 0px 2px 25px #adf;*/
+  height: 88px;
+  /*border-top-right-radius: 15px;
+  border-top-left-radius: 15px;*/
+}
+
+ul.nice-menu-right, ul.nice-menu-right li, ul.nice-menu-right li ul li a,
+ul.nice-menu-left, ul.nice-menu-left li, ul.nice-menu-left li ul li a,
+ul.nice-menu ul li {
+  width: 100%;
+}
+
+.nice-menu a, .nice-menu a:link, .nice-menu a:visited {
+    border: none;
+}
+
+ul.nice-menu li.menuparent ul, #header-region ul.nice-menu li.menuparent ul {
+  width: 100%;
+}
+
+ul.nice-menu-left li ul {
+  width: 0em;
+  left: 0em;
+  top: 3.5em;
+}
+
+#zone-preface-wrapper {
+  padding-bottom: 0.6em;
+position:relative;
+z-index:2;
+}
+
+.user-first .menu li {
+  display: inline;
+  list-style-type: none;
+  padding-left: 10px;
+  padding-right: 10px;  
+}
+
+.region-user-first-inner {
+  padding-top: 20px;
+}
+
+
+.user-first .menu {
+  padding: 10px 10px 10px 30px;
+}
+
+
+/*  jquerymenu styles*/
+.jquerymenu .active {
+  color: #000000;
+}
+
+ul.jquerymenu, ul.jquerymenu ul {
+  list-style-type: none;
+  background: url(vline.png) repeat-y;
+  margin: 0;
+  padding: 0;
+}
+ 
+ul.jquerymenu ul {
+  margin-left: 5px;
+}
+
+ul.jquerymenu li {
+  margin: 0;
+  padding: 0 6px;
+}
+ 
+ul.jquerymenu li.parent span.closed {
+  background-image: url(../images/plus.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+ul.jquerymenu li.parent span.open {
+  background-image: url(../images/minus.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+#megamenu-main-menu li {
+  display: inline;  /* makes menu horizontal */
+}
+
+#megamenu-main-menu a {
+  display: inline;   /* makes menu horizontal */
+}
+
+
+#megamenu-main-menu .megamenu-slot {
+  display: block;
+}
+
+
+#megamenu-main-menu .megamenu-bin {
+  width:960px !important;
+}
+
+#megamenu-main-menu .megamenu-bin > li {
+  display: inline;  /* makes dropdown items float left */
+  float: left;
+}
